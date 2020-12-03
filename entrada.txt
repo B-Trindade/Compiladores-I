@@ -1,0 +1,14 @@
+function log( msg ) {
+  msg asm{println # undefined};
+}
+
+function mdc( a = 36, b = 48 ) {
+  if( b == 0 )
+    return a;
+  else
+    return mdc( b, a%b );
+}
+
+log( mdc() );
+log( mdc( 18 ) );
+log( mdc( 15, 25 ) );
